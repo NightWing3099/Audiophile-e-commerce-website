@@ -121,7 +121,7 @@ export function renderCartModal(container) {
         <span class="text-[15px] text-black/50 uppercase">Total</span>
         <span class="text-lg font-bold">$ ${total.toLocaleString()}</span>
       </div>
-      <a href="/checkout" class="block w-full bg-primary text-white text-center py-3 text-sm font-bold tracking-wide uppercase hover:bg-primary-hover transition-colors">
+      <a href="./checkout.html" class="block w-full bg-primary text-white text-center py-3 text-sm font-bold tracking-wide uppercase hover:bg-primary-hover transition-colors">
         Checkout
       </a>
     </div>
@@ -174,7 +174,14 @@ export function initCartUI() {
   cartBtn.addEventListener('click', openCart);
   cartClose?.addEventListener('click', closeCart);
   cartOverlay.addEventListener('click', (e) => {
-    if (e.target === cartOverlay) closeCart();
+    if (!cartPanel.contains(e.target)) closeCart();
+  });
+
+  // Close cart on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !cartOverlay.classList.contains('hidden')) {
+      closeCart();
+    }
   });
 
   function updateCount() {

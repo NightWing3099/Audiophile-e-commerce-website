@@ -301,6 +301,9 @@
   .mb-28 {
     margin-bottom: calc(var(--spacing) * 28);
   }
+  .ml-auto {
+    margin-left: auto;
+  }
   .block {
     display: block;
   }

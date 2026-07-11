@@ -37,9 +37,10 @@ function renderOrderConfirmation() {
   const cart = getCart();
   const container = document.querySelector('[data-order-items]');
   const otherCount = document.querySelector('[data-other-count]');
+  const otherRow = document.querySelector('[data-other-row]');
   const grandTotal = document.querySelector('[data-modal-grand-total]');
 
-  if (!container) return;
+  if (!container || cart.length === 0) return;
 
   const total = getCartTotal();
   const shipping = 50;
@@ -61,6 +62,7 @@ function renderOrderConfirmation() {
   `;
 
   if (otherCount) otherCount.textContent = otherTotal;
+  if (otherRow) otherRow.classList.toggle('hidden', otherTotal === 0);
   if (grandTotal) grandTotal.textContent = formatPrice(total + shipping);
 }
 
@@ -133,6 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('continue-pay')?.addEventListener('click', (e) => {
     e.preventDefault();
     if (!validateForm()) return;
+
+    const cart = getCart();
+    if (cart.length === 0) return;
 
     const modal = document.getElementById('success-modal');
     if (modal) {
