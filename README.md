@@ -77,7 +77,3 @@ Then open `index.html` in your browser or serve the directory with a local stati
 - Writing modular, reusable JavaScript with ES modules
 - Implementing accessible, responsive layouts
 - Following a consistent design system with custom Tailwind theme extensions
-
-## License
-
-This project is based on a [Frontend Mentor](https://www.frontendmentor.io) premium challenge and is intended for portfolio and educational use.
