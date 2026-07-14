@@ -4,10 +4,6 @@ A fully responsive, multi-page e-commerce storefront for premium audio gear. Bui
 
 ![Design preview for the Audiophile e-commerce website](./preview.jpg)
 
-## Live Demo
-
-- **Live Site:** [https://nightwing3099.github.io/Audiophile-e-commerce-website/](https://nightwing3099.github.io/Audiophile-e-commerce-website/)
-- **Repository:** [https://github.com/NightWing3099/Audiophile-e-commerce-website](https://github.com/NightWing3099/Audiophile-e-commerce-website)
 
 ## Project Overview
 
