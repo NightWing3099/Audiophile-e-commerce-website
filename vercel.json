@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".",
+  "installCommand": "npm install",
+  "framework": null,
+  "rewrites": [
+    { "source": "/headphones", "destination": "/headphones.html" },
+    { "source": "/speakers", "destination": "/speakers.html" },
+    { "source": "/earphones", "destination": "/earphones.html" },
+    { "source": "/checkout", "destination": "/checkout.html" },
+    { "source": "/product/xx99-mark-two-headphones", "destination": "/product-xx99-mark-two-headphones.html" },
+    { "source": "/product/xx99-mark-one-headphones", "destination": "/product-xx99-mark-one-headphones.html" },
+    { "source": "/product/xx59-headphones", "destination": "/product-xx59-headphones.html" },
+    { "source": "/product/zx9-speaker", "destination": "/product-zx9-speaker.html" },
+    { "source": "/product/zx7-speaker", "destination": "/product-zx7-speaker.html" },
+    { "source": "/product/yx1-earphones", "destination": "/product-yx1-earphones.html" }
+  ]
+}
